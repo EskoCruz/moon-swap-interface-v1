@@ -1,7 +1,12 @@
 import React, { ReactNode } from 'react'
 import styled from 'styled-components'
-import { Heading, IconButton, Text, Flex, useModal, TuneIcon, HistoryIcon } from '@pancakeswap-libs/uikit'
 import useI18n from 'hooks/useI18n'
+import { useModal } from '@pancakeswap-libs/uikit'
+import { TuneIcon, HistoryIcon } from '../Svg'
+import IconButton from "../Button/IconButton";
+import Flex from '../Box/Flex'
+import { Text } from '../Text'
+import Heading from '../Heading/Heading'
 import SettingsModal from './SettingsModal'
 import RecentTransactionsModal from './RecentTransactionsModal'
 
@@ -12,7 +17,7 @@ interface PageHeaderProps {
 }
 
 const StyledPageHeader = styled.div`
-  border-bottom: 1px solid ${({ theme }) => theme.colors.borderColor};
+  border: 1px solid ${({ theme }) => theme.colors.borderColor};
   padding: 24px;
 `
 

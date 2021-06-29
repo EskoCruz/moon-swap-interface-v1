@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
-import { Input, Text, Flex, Box } from '@pancakeswap-libs/uikit'
 import { useUserDeadline } from 'state/user/hooks'
+import { Input } from '../Input'
+import { Text } from '../Text'
+import Flex from '../Box/Flex'
+import { Box } from '../Box'
 import QuestionHelper from '../QuestionHelper'
 
 const Field = styled.div`

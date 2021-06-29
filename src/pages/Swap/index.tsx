@@ -1,14 +1,16 @@
 import { CurrencyAmount, JSBI, Token, Trade } from '@pancakeswap-libs/sdk'
 import React, { useCallback, useContext, useEffect, useMemo, useState, useRef } from 'react'
 import { ArrowDown } from 'react-feather'
-import { CardBody, ArrowDownIcon, Button, IconButton, Text, useModal, Link, Flex } from '@pancakeswap-libs/uikit'
+import { Link } from 'components/Link'
+import { useModal } from 'widgets/Modal'
+import IconButton from 'components/Button/IconButton'
+import { Text } from 'components/Text'
 import styled, { ThemeContext } from 'styled-components'
 import AddressInputPanel from 'components/AddressInputPanel'
 import Card, { GreyCard } from 'components/Card'
 import { AutoColumn } from 'components/Column'
 import ConfirmSwapModal from 'components/swap/ConfirmSwapModal'
 import CurrencyInputPanel from 'components/CurrencyInputPanel'
-import CardNav from 'components/CardNav'
 import { AutoRow, RowBetween } from 'components/Row'
 import AdvancedSwapDetailsDropdown from 'components/swap/AdvancedSwapDetailsDropdown'
 import confirmPriceImpactWithoutFee from 'components/swap/confirmPriceImpactWithoutFee'
@@ -37,6 +39,10 @@ import useI18n from 'hooks/useI18n'
 import PageHeader from 'components/PageHeader'
 import ConnectWalletButton from 'components/ConnectWalletButton'
 import V2ExchangeRedirectModal from 'components/V2ExchangeRedirectModal'
+import Flex from 'components/Box/Flex'
+import { ArrowDownIcon } from 'components/Svg'
+import { CardBody } from 'components/CardUi'
+import { Button } from 'components/Button'
 import AppBody from '../AppBody'
 
 const StyledLink = styled(Link)`
@@ -370,7 +376,6 @@ const Swap = () => {
         onConfirm={handleConfirmWarning}
       />
       <SafeMoonWarningModal isOpen={transactionWarning.selectedToken === 'SAFEMOON'} onConfirm={handleConfirmWarning} />
-      <CardNav />
       <AppBody>
         <Wrapper id="swap-page">
           <ConfirmSwapModal
@@ -387,7 +392,7 @@ const Swap = () => {
             onDismiss={handleConfirmDismiss}
           />
           <PageHeader
-            title={TranslateString(8, 'Exchange')}
+            title={TranslateString(8, 'MoonSwap Exchange')}
             description={TranslateString(1192, 'Trade tokens in an instant')}
           />
           <CardBody>
@@ -416,7 +421,7 @@ const Swap = () => {
                         setApprovalSubmitted(false) // reset 2 step UI for approvals
                         onSwitchTokens()
                       }}
-                      style={{ borderRadius: '50%' }}
+                      style={{ border: '1px #FFFFFF solid', borderRadius: 0 }}
                       scale="sm"
                     >
                       <ArrowDownIcon color="primary" width="24px" />

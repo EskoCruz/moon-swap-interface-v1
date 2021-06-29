@@ -4,7 +4,7 @@ const config: MenuEntry[] = [
   {
     label: 'Home',
     icon: 'HomeIcon',
-    href: 'https://pancakeswap.finance/',
+    href: 'https://moontoken.io/',
   },
   {
     label: 'Trade',
@@ -15,54 +15,54 @@ const config: MenuEntry[] = [
       color: 'warning',
     },
     items: [
-      {
-        label: 'LP Migration',
-        href: '/migrate',
-      },
+      // {
+      //   label: 'LP Migration',
+      //   href: '/migrate',
+      // },
       {
         label: 'Exchange',
         href: 'https://exchange.pancakeswap.finance/#/swap',
       },
-      {
-        label: 'Liquidity',
-        href: 'https://exchange.pancakeswap.finance/#/pool',
-      },
-      {
-        label: 'V1 Liquidity (Old)',
-        href: '/pool',
-      },
+      // {
+      //   label: 'Liquidity',
+      //   href: 'https://exchange.pancakeswap.finance/#/pool',
+      // },
+      // {
+      //   label: 'V1 Liquidity (Old)',
+      //   href: '/pool',
+      // },
     ],
   },
-  {
-    label: 'Farms',
-    icon: 'FarmIcon',
-    href: 'https://pancakeswap.finance/farms',
-  },
-  {
-    label: 'Pools',
-    icon: 'PoolIcon',
-    href: 'https://pancakeswap.finance/pools',
-  },
-  {
-    label: 'Prediction (BETA)',
-    icon: 'PredictionsIcon',
-    href: 'https://pancakeswap.finance/prediction',
-  },
-  {
-    label: 'Lottery',
-    icon: 'TicketIcon',
-    href: 'https://pancakeswap.finance/lottery',
-  },
-  {
-    label: 'Collectibles',
-    icon: 'NftIcon',
-    href: 'https://pancakeswap.finance/nft',
-  },
-  {
-    label: 'Team Battle',
-    icon: 'TeamBattleIcon',
-    href: 'https://pancakeswap.finance/competition',
-  },
+  // {
+  //   label: 'Farms',
+  //   icon: 'FarmIcon',
+  //   href: 'https://pancakeswap.finance/farms',
+  // },
+  // {
+  //   label: 'Pools',
+  //   icon: 'PoolIcon',
+  //   href: 'https://pancakeswap.finance/pools',
+  // },
+  // {
+  //   label: 'Prediction (BETA)',
+  //   icon: 'PredictionsIcon',
+  //   href: 'https://pancakeswap.finance/prediction',
+  // },
+  // {
+  //   label: 'Lottery',
+  //   icon: 'TicketIcon',
+  //   href: 'https://pancakeswap.finance/lottery',
+  // },
+  // {
+  //   label: 'Collectibles',
+  //   icon: 'NftIcon',
+  //   href: 'https://pancakeswap.finance/nft',
+  // },
+  // {
+  //   label: 'Team Battle',
+  //   icon: 'TeamBattleIcon',
+  //   href: 'https://pancakeswap.finance/competition',
+  // },
   {
     label: 'Teams & Profile',
     icon: 'GroupsIcon',
@@ -103,11 +103,11 @@ const config: MenuEntry[] = [
       },
     ],
   },
-  {
-    label: 'IFO',
-    icon: 'IfoIcon',
-    href: 'https://pancakeswap.finance/ifo',
-  },
+  // {
+  //   label: 'IFO',
+  //   icon: 'IfoIcon',
+  //   href: 'https://pancakeswap.finance/ifo',
+  // },
   {
     label: 'More',
     icon: 'MoreIcon',
