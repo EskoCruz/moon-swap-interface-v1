@@ -51,6 +51,7 @@ export type Colors = {
   inputSecondary: string;
   background: string;
   backgroundDisabled: string;
+  backgroundModal: string;
   backgroundAlt: string;
   text: string;
   textDisabled: string;
