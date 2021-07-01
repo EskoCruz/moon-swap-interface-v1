@@ -15,7 +15,7 @@ const Menu: React.FC = (props) => {
   const { selectedLanguage, setSelectedLanguage } = useContext(LanguageContext)
   const { isDark, toggleTheme } = useTheme()
   const priceData = useGetPriceData()
-  const cakePriceUsd = priceData ? Number(priceData.data[MOONTOKEN.address].price) : undefined
+  const moonPriceUsd = priceData ? Number(priceData.data[MOONTOKEN.address].price) : undefined
 
   return (
     <UikitMenu
@@ -28,7 +28,7 @@ const Menu: React.FC = (props) => {
       currentLang={selectedLanguage?.code || ''}
       langs={allLanguages}
       setLang={setSelectedLanguage}
-      cakePriceUsd={cakePriceUsd}
+      moonPriceUsd={moonPriceUsd}
       {...props}
     />
   )

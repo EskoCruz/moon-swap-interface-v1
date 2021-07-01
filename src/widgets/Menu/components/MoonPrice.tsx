@@ -1,11 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import { PancakeRoundIcon } from "../../../components/Svg";
 import Text from "../../../components/Text/Text";
 import Skeleton from "../../../components/Skeleton/Skeleton";
 
 interface Props {
-  cakePriceUsd?: number;
+  moonPriceUsd?: number;
 }
 
 const PriceLink = styled.a`
@@ -21,15 +20,14 @@ const PriceLink = styled.a`
   }
 `;
 
-const CakePrice: React.FC<Props> = ({ cakePriceUsd }) => {
-  return cakePriceUsd ? (
+const MoonPrice: React.FC<Props> = ({ moonPriceUsd }) => {
+  return moonPriceUsd ? (
     <PriceLink href="https://pancakeswap.info/token/0x81E4d494b85A24a58a6BA45c9B418b32a4E039de" target="_blank">
-      <PancakeRoundIcon width="24px" mr="8px" />
-      <Text color="textSubtle" bold>{`$${cakePriceUsd.toFixed(3)}`}</Text>
+      <Text color="textSubtle" bold>{`$${moonPriceUsd.toFixed(3)}`}</Text>
     </PriceLink>
   ) : (
     <Skeleton width={80} height={24} />
   );
 };
 
-export default React.memo(CakePrice);
+export default React.memo(MoonPrice);
