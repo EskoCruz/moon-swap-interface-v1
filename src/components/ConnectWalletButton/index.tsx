@@ -1,7 +1,9 @@
 import React from 'react'
-import { useWalletModal } from '@pancakeswap-libs/uikit'
+// import { useWalletModal } from '@pancakeswap-libs/uikit'
 import useI18n from 'hooks/useI18n'
 import useAuth from 'hooks/useAuth'
+import { useWalletModal } from '@pancakeswap-libs/uikit'
+// import { useWalletModal } from '../../widgets/WalletModal'
 import { Button, ButtonProps } from '../Button'
 
 const UnlockButton: React.FC<ButtonProps> = (props) => {
