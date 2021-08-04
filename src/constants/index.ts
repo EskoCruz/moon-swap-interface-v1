@@ -19,7 +19,7 @@ export const MOONTOKEN = new Token(
   '0x81E4d494b85A24a58a6BA45c9B418b32a4E039de',
   18,
   'MOONTOKEN',
-  'Moon Token'
+  'MoonToken'
 )
 export const WBNB = new Token(ChainId.MAINNET, '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c', 18, 'WBNB', 'Wrapped BNB')
 export const DAI = new Token(ChainId.MAINNET, '0x1AF3F329e8BE154074D8769D1FFa4eE058B1DBc3', 18, 'DAI', 'Dai Stablecoin')
