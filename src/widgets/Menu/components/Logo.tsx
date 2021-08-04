@@ -59,11 +59,11 @@ const Logo: React.FC<Props> = ({ isDark, href }) => {
   return (
     <Flex>
       {isAbsoluteUrl ? (
-        <StyledLink as="a" href={href} aria-label="Moon Token home page">
+        <StyledLink as="a" href={href} aria-label="MoonToken home page">
           {innerLogo}
         </StyledLink>
       ) : (
-        <StyledLink to={href} aria-label="Moon Token home page">
+        <StyledLink to={href} aria-label="MoonToken home page">
           {innerLogo}
         </StyledLink>
       )}

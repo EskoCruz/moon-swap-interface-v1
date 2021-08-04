@@ -2,10 +2,10 @@ import { useCurrency } from 'hooks/Tokens'
 import { useTradeExactIn } from 'hooks/Trades'
 import { tryParseAmount } from 'state/swap/hooks'
 
-const useGetCakeBusdLpPrice = () => {
-    const cakeAddress = '0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82'
+const useGetMoonBusdLpPrice = () => {
+    const moonAddress = '0x81E4d494b85A24a58a6BA45c9B418b32a4E039de'
     const busdAddress = '0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56'
-    const inputCurrency = useCurrency(cakeAddress)
+    const inputCurrency = useCurrency(moonAddress)
     const outputCurrency = useCurrency(busdAddress)
     const parsedAmount = tryParseAmount('1', inputCurrency ?? undefined)
     const bestTradeExactIn = useTradeExactIn(parsedAmount, outputCurrency ?? undefined)
@@ -13,4 +13,4 @@ const useGetCakeBusdLpPrice = () => {
     return price ? parseFloat(price) : undefined
 }
 
-export default useGetCakeBusdLpPrice
+export default useGetMoonBusdLpPrice
