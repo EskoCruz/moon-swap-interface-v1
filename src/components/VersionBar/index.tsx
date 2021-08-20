@@ -21,7 +21,7 @@ const Wrapper = styled.div`
 const VersionBar = () => {
   return (
     <Wrapper>
-      <Text bold mr="16px">
+      <Text mr="16px" color="#FFFFFF">
         &copy; 2021 MoonToken | Community Owned.
       </Text>
     </Wrapper>
