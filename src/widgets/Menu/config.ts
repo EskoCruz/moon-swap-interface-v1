@@ -39,7 +39,6 @@ export const links = [
     label: "Farms",
     icon: "FarmIcon",
     href: "/farms",
-    status: status.LIVE,
   },
   {
     label: "Pools",
@@ -60,7 +59,6 @@ export const links = [
     label: "Team Battle",
     icon: "TeamBattleIcon",
     href: "/competition",
-    status: status.SOON,
   },
   {
     label: "Profile & Teams",
@@ -69,7 +67,6 @@ export const links = [
       {
         label: "Leaderboard",
         href: "/teams",
-        status: status.NEW,
       },
       {
         label: "YourProfile",
