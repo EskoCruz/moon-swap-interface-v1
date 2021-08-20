@@ -1,5 +1,5 @@
 import { AlertTheme } from "../components/Alert/types";
-import { CardTheme } from "../components/Card/types";
+import { CardTheme } from "../components/CardUi/types";
 import { RadioTheme } from "../components/Radio/types";
 import { ToggleTheme } from "../components/Toggle/types";
 import { TooltipTheme } from "../components/Tooltip/types";

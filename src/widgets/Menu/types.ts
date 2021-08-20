@@ -1,3 +1,4 @@
+import { ReactElement } from "react";
 import { Colors } from "../../theme/types";
 import { Login } from "../WalletModal";
 
@@ -47,6 +48,7 @@ export interface MenuEntry {
 export interface PanelProps {
   isDark: boolean;
   toggleTheme: (isDark: boolean) => void;
+  cakePriceUsd?: number;
   moonPriceUsd?: number;
   currentLang: string;
   langs: LangType[];

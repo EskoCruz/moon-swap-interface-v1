@@ -10,10 +10,6 @@ const config: MenuEntry[] = [
     label: 'Trade',
     icon: 'TradeIcon',
     initialOpenState: true,
-    status: {
-      text: 'MIGRATE',
-      color: 'warning',
-    },
     items: [
       // {
       //   label: 'LP Migration',
