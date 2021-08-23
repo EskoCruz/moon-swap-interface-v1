@@ -78,22 +78,22 @@ const Alert: React.FC<AlertProps> = ({ title, children, variant, onClick }) => {
   const Icon = getIcon(variant);
 
   return (
-    <StyledAlert>
-      <IconLabel variant={variant} hasDescription={!!children}>
-        <Icon color="currentColor" width="24px" />
-      </IconLabel>
-      <Details hasHandler={!!onClick}>
-        <Text bold>{title}</Text>
-        {typeof children === "string" ? <Text as="p">{children}</Text> : children}
-      </Details>
-      {onClick && (
-        <CloseHandler>
-          <IconButton scale="sm" variant="text" onClick={onClick}>
-            <CloseIcon width="24px" color="currentColor" />
-          </IconButton>
-        </CloseHandler>
-      )}
-    </StyledAlert>
+      <StyledAlert>
+        <IconLabel variant={variant} hasDescription={!!children}>
+          <Icon color="currentColor" width="24px" />
+        </IconLabel>
+        <Details hasHandler={!!onClick}>
+          <Text bold>{title}</Text>
+          {typeof children === "string" ? <Text as="p">{children}</Text> : children}
+        </Details>
+        {onClick && (
+            <CloseHandler>
+              <IconButton scale="sm" variant="text" onClick={onClick}>
+                <CloseIcon width="24px" color="currentColor" />
+              </IconButton>
+            </CloseHandler>
+        )}
+      </StyledAlert>
   );
 };
 

@@ -19,11 +19,11 @@ const AdvancedDetailsFooter = styled.div<{ show: boolean }>`
 `
 
 export default function AdvancedSwapDetailsDropdown({ trade, ...rest }: AdvancedSwapDetailsProps) {
-  const lastTrade = useLastTruthy(trade)
+    const lastTrade = useLastTruthy(trade)
 
-  return (
-    <AdvancedDetailsFooter show={Boolean(trade)}>
-      <AdvancedSwapDetails {...rest} trade={trade ?? lastTrade ?? undefined} />
-    </AdvancedDetailsFooter>
-  )
+    return (
+        <AdvancedDetailsFooter show={Boolean(trade)}>
+            <AdvancedSwapDetails {...rest} trade={trade ?? lastTrade ?? undefined} />
+        </AdvancedDetailsFooter>
+    )
 }

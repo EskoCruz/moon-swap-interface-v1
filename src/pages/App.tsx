@@ -2,9 +2,8 @@ import React, { Suspense, useEffect, useState } from 'react'
 import { HashRouter, Route, Switch } from 'react-router-dom'
 import styled from 'styled-components'
 import { Credentials, StringTranslations } from '@crowdin/crowdin-api-client'
+import { LangType, useModal } from '@pancakeswap-libs/uikit'
 import VersionBar from 'components/VersionBar'
-import { LangType } from '../widgets/Menu/types'
-import useModal from '../widgets/Modal/useModal'
 import Popups from '../components/Popups'
 import Web3ReactManager from '../components/Web3ReactManager'
 import Swap from './Swap'
@@ -81,19 +80,19 @@ export default function App() {
 
   const fetchTranslationsForSelectedLanguage = async () => {
     stringTranslationsApi
-      .listLanguageTranslations(projectId, selectedLanguage.code, undefined, fileId, 200)
-      .then((translationApiResponse) => {
-        if (translationApiResponse.data.length < 1) {
+        .listLanguageTranslations(projectId, selectedLanguage.code, undefined, fileId, 200)
+        .then((translationApiResponse) => {
+          if (translationApiResponse.data.length < 1) {
+            setTranslations(['error'])
+          } else {
+            setTranslations(translationApiResponse.data)
+          }
+        })
+        .then(() => setTranslatedLanguage(selectedLanguage))
+        .catch((error) => {
           setTranslations(['error'])
-        } else {
-          setTranslations(translationApiResponse.data)
-        }
-      })
-      .then(() => setTranslatedLanguage(selectedLanguage))
-      .catch((error) => {
-        setTranslations(['error'])
-        console.error(error)
-      })
+          console.error(error)
+        })
   }
 
   useEffect(() => {
@@ -115,12 +114,12 @@ export default function App() {
       <HashRouter>
         <AppWrapper>
           <LanguageContext.Provider
-            value={{
-              selectedLanguage,
-              setSelectedLanguage: handleLanguageSelect,
-              translatedLanguage,
-              setTranslatedLanguage,
-            }}
+              value={{
+                selectedLanguage,
+                setSelectedLanguage: handleLanguageSelect,
+                translatedLanguage,
+                setTranslatedLanguage,
+              }}
           >
             <TranslationsContext.Provider value={{ translations, setTranslations }}>
               <Menu>

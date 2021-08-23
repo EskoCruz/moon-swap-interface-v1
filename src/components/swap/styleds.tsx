@@ -14,13 +14,13 @@ export const ArrowWrapper = styled.div<{ clickable: boolean }>`
 
   ${({ clickable }) =>
     clickable
-      ? css`
+        ? css`
           :hover {
             cursor: pointer;
             opacity: 0.8;
           }
         `
-      : null}
+        : null}
 `
 
 export const SectionBreak = styled.div`
@@ -36,12 +36,12 @@ export const BottomGrouping = styled.div`
 export const ErrorText = styled(Text)<{ severity?: 0 | 1 | 2 | 3 | 4 }>`
   color: ${({ theme, severity }) =>
     severity === 3 || severity === 4
-      ? theme.colors.failure
-      : severity === 2
-      ? theme.colors.binance
-      : severity === 1
-      ? theme.colors.text
-      : theme.colors.success};
+        ? theme.colors.failure
+        : severity === 2
+            ? theme.colors.binance
+            : severity === 1
+                ? theme.colors.text
+                : theme.colors.success};
 `
 
 export const StyledBalanceMaxMini = styled.button`
@@ -122,14 +122,14 @@ const SwapCallbackErrorInnerAlertTriangle = styled.div`
 `
 
 export function SwapCallbackError({ error }: { error: string }) {
-  return (
-    <SwapCallbackErrorInner>
-      <SwapCallbackErrorInnerAlertTriangle>
-        <AlertTriangle size={24} />
-      </SwapCallbackErrorInnerAlertTriangle>
-      <p>{error}</p>
-    </SwapCallbackErrorInner>
-  )
+    return (
+        <SwapCallbackErrorInner>
+            <SwapCallbackErrorInnerAlertTriangle>
+                <AlertTriangle size={24} />
+            </SwapCallbackErrorInnerAlertTriangle>
+            <p>{error}</p>
+        </SwapCallbackErrorInner>
+    )
 }
 
 export const SwapShowAcceptChanges = styled(AutoColumn)`
