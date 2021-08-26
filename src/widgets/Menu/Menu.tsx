@@ -14,7 +14,26 @@ const Wrapper = styled.div`
   width: 100%;
 `;
 
-const StyledNav = styled.nav<{ showMenu: boolean }>`
+// const StyledNav = styled.nav<{ showMenu: boolean }>`
+//   position: fixed;
+//   top: ${({ showMenu }) => (showMenu ? 0 : `-${MENU_HEIGHT}px`)};
+//   left: 0;
+//   transition: top 0.2s;
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   padding-left: 8px;
+//   padding-right: 16px;
+//   width: 100%;
+//   height: ${MENU_HEIGHT}px;
+//   background-color: ${({ theme }) => theme.nav.background};
+//   border-bottom: solid 2px rgba(133, 133, 133, 0.1);
+//   z-index: 20;
+//   transform: translate3d(0, 0, 0);
+// `;
+
+const StyledNav = {
+  Fun: styled.nav<{ showMenu: boolean }>`
   position: fixed;
   top: ${({ showMenu }) => (showMenu ? 0 : `-${MENU_HEIGHT}px`)};
   left: 0;
@@ -30,6 +49,38 @@ const StyledNav = styled.nav<{ showMenu: boolean }>`
   border-bottom: solid 2px rgba(133, 133, 133, 0.1);
   z-index: 20;
   transform: translate3d(0, 0, 0);
+  `,
+};
+
+const NavBar = styled.ul<{ isPushed: boolean }>`
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+  // -ms-flex-direction: column;
+  // flex-direction: column;
+  // margin-left: auto!important;
+
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+  li {
+    padding: 0 4px;
+    &:before {
+      content: "";
+    }
+    a {
+      padding-right: .5rem;
+      padding-left: .5rem;
+      color: #1B3F7B;
+      //font-weight: 600;
+    }
+  }
+  
 `;
 
 const BodyWrapper = styled.div`
@@ -104,20 +155,48 @@ const Menu: React.FC<NavProps> = ({
 
   // Find the home link if provided
   const homeLink = links.find((link) => link.label === "Home");
-
+  const li = [
+    {
+      id: 1,
+      link: "https://moontoken.io/",
+      text:"HOME"
+    },
+    {
+      id: 2,
+      link: "https://moontoken.io/our-vision",
+      text:"OUR VISION"
+    },
+    {
+      id: 3,
+      link: "https://moontoken.io/donate",
+      text:"DONATE"
+    },
+    {
+      id: 4,
+      link: "https://moontoken.shop/password",
+      text:"MERCH"
+    }
+  ];
   return (
     <Wrapper>
-      <StyledNav showMenu={showMenu}>
+      <StyledNav.Fun showMenu={showMenu}>
         <Logo
           isPushed={isPushed}
           togglePush={() => setIsPushed((prevState: boolean) => !prevState)}
           isDark={isDark}
           href={homeLink?.href ?? "/"}
         />
+        <NavBar isPushed={isPushed}>
+          {
+            li.map((objLink) => {
+              return ( <li key={objLink.id}><a href={objLink.link}>{objLink.text}</a></li> )
+            })
+          }
+        </NavBar>
         <Flex>
           <UserBlock account={account} login={login} logout={logout} />
         </Flex>
-      </StyledNav>
+      </StyledNav.Fun>
       <BodyWrapper>
 
         <Inner isPushed={isPushed} showMenu={showMenu}>
