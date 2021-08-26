@@ -157,18 +157,22 @@ const Menu: React.FC<NavProps> = ({
   const homeLink = links.find((link) => link.label === "Home");
   const li = [
     {
+      id: 1,
       link: "https://moontoken.io/",
       text:"HOME"
     },
     {
+      id: 2,
       link: "https://moontoken.io/our-vision",
       text:"OUR VISION"
     },
     {
+      id: 3,
       link: "https://moontoken.io/donate",
       text:"DONATE"
     },
     {
+      id: 4,
       link: "https://moontoken.shop/password",
       text:"MERCH"
     }
@@ -185,7 +189,7 @@ const Menu: React.FC<NavProps> = ({
         <NavBar isPushed={isPushed}>
           {
             li.map((objLink) => {
-              return ( <li><a href={objLink.link}>{objLink.text}</a></li> )
+              return ( <li key={objLink.id}><a href={objLink.link}>{objLink.text}</a></li> )
             })
           }
         </NavBar>
