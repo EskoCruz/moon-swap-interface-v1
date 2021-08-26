@@ -1,9 +1,9 @@
-# 🌕 MoonSwap Exchange
+# 🌕 MoonToken Swap Exchange
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/c6ef7e73-4a84-410d-83b0-b89326787dff/deploy-status)](https://app.netlify.com/sites/swap-master/deploys)
 
-[MoonSwap](https://moontoken.io/) is an automated market maker (“**AMM**”) that allows two tokens to be exchanged on the [Binance Smart Chain](https://www.binance.org/en/smartChain) (BSC). It is fast, cheap, and allows anyone to participate.
+[MoonToken Swap](https://swap.moontoken.io/) is an automated market maker (“**AMM**”) that allows two tokens to be exchanged on the [Binance Smart Chain](https://www.binance.org/en/smartChain) (BSC). It is fast, cheap, and allows anyone to participate.
 
-This repo is responsible for the **exchange** interface of the AMM: [exchange.moontoken.io](https://exchange.moontoken.io/)
+This repo is responsible for the **exchange** interface of the AMM: [swap.moontoken.io](https://swap.moontoken.io/)
 
 If you want to contribute, please refer to the [contributing guidelines](./CONTRIBUTING.md) of this project.

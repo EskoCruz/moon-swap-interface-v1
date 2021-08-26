@@ -13,7 +13,7 @@ const useGetDocumentTitlePrice = () => {
             })}`
 
     useEffect(() => {
-        document.title = `MoonSwap${moonPriceBusdString}`
+        document.title = `MoonToken Swap${moonPriceBusdString}`
     }, [moonPriceBusdString])
 }
 export default useGetDocumentTitlePrice
