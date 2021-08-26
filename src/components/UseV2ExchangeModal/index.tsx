@@ -61,10 +61,10 @@ const UseV2ExchangeModal = ({ onDismiss = defaultOnDismiss }: UseV2ExchangeModal
     <Modal onDismiss={onDismiss} title="Use V2 Exchange" hideCloseButton>
       <Box maxWidth="320px">
         <Text color="failure" mb="24px">
-          MoonSwap V1 is no longer supported.
+          MoonToken Swap V1 is no longer supported.
         </Text>
         <Text mb="24px">Go to the V2 Exchange instead for better prices on most pairs.</Text>
-        <StyledLink href="https://exchange.pancakeswap.finance/#/swap" external>
+        <StyledLink href="https://swap.moontoken.io/" external>
           <Button mt="8px" width="100%">
             Go to V2 Exchange
           </Button>

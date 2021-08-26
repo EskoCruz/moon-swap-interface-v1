@@ -17,7 +17,7 @@ const config: MenuEntry[] = [
       // },
       {
         label: 'Exchange',
-        href: 'https://exchange.pancakeswap.finance/#/swap',
+        href: 'https://swap.moontoken.io/',
       },
       // {
       //   label: 'Liquidity',

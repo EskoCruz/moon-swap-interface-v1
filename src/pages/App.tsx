@@ -128,7 +128,7 @@ export default function App() {
                   <Popups />
                   <Web3ReactManager>
                     <Switch>
-                      <Route exact strict path="/swap" component={Swap} />
+                      <Route exact strict path="/" component={Swap} />
                       <Route exact path="/migrate" component={Migration} />
                       <Route component={RedirectPathToSwapOnly} />
                     </Switch>
