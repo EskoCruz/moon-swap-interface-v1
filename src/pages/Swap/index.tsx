@@ -163,7 +163,7 @@ const Swap = () => {
       }
 
       if (modalCountdownSecondsRemaining <= 0) {
-        window.location.href = 'https://exchange.pancakeswap.finance/#/swap'
+        window.location.href = 'https://swap.moontoken.io/'
       }
 
       return () => {
@@ -398,7 +398,7 @@ const Swap = () => {
             onDismiss={handleConfirmDismiss}
           />
           <PageHeader
-            title={TranslateString(8, 'MoonSwap Exchange')}
+            title={TranslateString(8, 'MoonToken Swap Exchange')}
             description={TranslateString(1192, 'Trade tokens in an instant')}
           />
           <CardBody>

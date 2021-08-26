@@ -1,6 +1,6 @@
 {
   "name": "@moonswap/interface",
-  "description": "MoonSwap Interface",
+  "description": "MoonToken Swap Interface",
   "homepage": ".",
   "private": true,
   "dependencies": {
