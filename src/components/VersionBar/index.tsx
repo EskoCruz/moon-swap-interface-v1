@@ -8,7 +8,7 @@ const Wrapper = styled.div`
   left: 0;
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   flex-wrap: wrap;
   background-color: ${({ theme }) => theme.colors.contrast};
@@ -22,7 +22,7 @@ const VersionBar = () => {
   return (
     <Wrapper>
       <Text mr="16px" color="#FFFFFF">
-        &copy; 2021 MoonToken | Community Owned.
+        &copy; 2021 MoonToken | Community Powered.
       </Text>
     </Wrapper>
   )
