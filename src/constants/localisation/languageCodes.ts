@@ -1,4 +1,5 @@
 export const EN = { code: 'en', language: 'English' }
+export const ENUS = { code: 'en-US', language: 'English' }
 export const AR = { code: 'ar', language: 'العربية' }
 export const BN = { code: 'bn', language: 'বাংলা'}
 export const ZHCN = { code: 'zh-CN', language: '简体中文' }
@@ -29,6 +30,7 @@ export const VI = { code: 'vi', language: 'Tiếng Việt' }
 
 export const allLanguages = [
   EN,
+  ENUS,
   AR,
   BN,
   ZHCN,
