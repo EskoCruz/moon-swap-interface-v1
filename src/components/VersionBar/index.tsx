@@ -11,7 +11,7 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  background-color: ${({ theme }) => theme.colors.tertiary};
+  background-color: ${({ theme }) => theme.colors.contrast};
   padding: 16px;
   ${({ theme }) => theme.mediaQueries.lg} {
     // padding-left: 240px;
