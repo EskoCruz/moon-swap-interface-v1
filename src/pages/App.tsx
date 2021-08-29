@@ -1,5 +1,5 @@
 import React, { Suspense, useEffect, useState } from 'react'
-import { HashRouter, Route, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import styled from 'styled-components'
 import { Credentials, StringTranslations } from '@crowdin/crowdin-api-client'
 import VersionBar from 'components/VersionBar'
@@ -112,7 +112,7 @@ export default function App() {
 
   return (
     <Suspense fallback={null}>
-      <HashRouter>
+      <Router>
         <AppWrapper>
           <LanguageContext.Provider
             value={{
@@ -139,7 +139,7 @@ export default function App() {
             </TranslationsContext.Provider>
           </LanguageContext.Provider>
         </AppWrapper>
-      </HashRouter>
+      </Router>
     </Suspense>
   )
 }
