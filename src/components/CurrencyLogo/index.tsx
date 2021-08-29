@@ -6,8 +6,12 @@ import { WrappedTokenInfo } from '../../state/lists/hooks'
 import Logo from '../Logo'
 import CoinLogo from '../moon/CoinLogo'
 
-const getTokenLogoURL = (address: string) =>
-  `https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/smartchain/assets/${address}/logo.png`
+const getTokenLogoURL = (address: string) => {
+  if (address === '0x81E4d494b85A24a58a6BA45c9B418b32a4E039de') {
+    return `/logo.png`
+  }
+  return `https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/smartchain/assets/${address}/logo.png`
+}
 
 const StyledBnbLogo = styled.img<{ size: string }>`
   width: ${({ size }) => size};
